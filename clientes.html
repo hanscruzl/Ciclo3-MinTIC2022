@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<title>RETO 2 - CLIENTES</title>
+	
+    <link href="css/estilos.css" rel="stylesheet"> 
+	
+	<script  src="js/peticiones_ajax_clientes.js"></script>
+	
+	<!-- <script  src="js/jquery-3.6.1.js"></script> -->
+		
+	<script src="https://code.jquery.com/jquery-3.6.1.js" 
+		integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" 
+		crossorigin="anonymous">
+	</script>
+
+</head>
+
+
+<body>
+	<center>
+	
+	<h1>GESTION DE CLIENTES</h1>
+	<hr style="width: 500px;"> <!--separador de temas con linea -->
+	<br>
+	<fieldset style="width: 600px;color: blue">
+	<legend><h2>Información Clientes</h2></legend>
+	
+	<table border="0">
+	
+	<tr>
+		<th><span style="color:blue;"><b>ID:</b></th>
+		<td>			
+			<input type="number" id="codigo" style="width: 80%;" placeholder="Ingresa un ID de cliente">
+			<input type="button" button class="button-8" role="button" id="btnBuscarID" value="Buscar cliente por ID" onclick="consultaID('#codigo')">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" button class="button-8" role="button" id="btnLimpiar" value="Limpiar datos" onclick="limpiar_formulario()">	
+				
+		</td>	
+	</tr>
+	<br>
+	<tr>
+		<th><span style="color: blue; align"><b>Nombre:</b></th>
+		<td>
+			
+			<input type="text" id="name" style="width: 95%;" placeholder="Ingresa un nombre de cliente">		
+		</td>	
+	
+	</tr>
+	
+	
+	
+	<tr>
+		<th><span style="color: blue;"><b>E-mail:</b></th>
+		<td>
+			
+			<input type="text" id="email" style="width: 75%;" placeholder="Ingresa un e-mail">		
+		</td>	
+	
+	</tr>
+	
+	<tr>
+		<th><span style="color: blue;"><b>Edad:</b></th>
+		<td>
+			
+			<input type="number" id="edad" style="width: 95%;" placeholder="Edad">		
+		</td>	
+	
+	</tr>
+	
+	
+	
+	
+	
+	<tr>
+		<td colspan="4">&nbsp;</td>
+			
+			<input type="button" button class="button-8" role="button" id="btnBuscarALL"  value="Mostrar Todos los Clientes" onclick="consultar_todo()">
+			&nbsp;&nbsp;
+			
+			<br><br>
+		
+	</tr>
+	
+	
+	
+	
+</table>
+
+	<tr>
+		<td colspan="4">&nbsp;</td>
+			<input type="button" button class="button-8" role="button" id="btnBuscarALL"  value="Agregar Cliente" onclick="guardarInformacion()">
+			<!-- otra forma: <button onclick="consultar()">Mostrar Registros </button> -->
+			&nbsp;&nbsp;
+			<input type="button" button class="button-8" role="button" id="btnBuscarID" value="Actualizar Cliente" onclick="editar_Informacion()"> <!-- otra forma es pasando el('#id')-->
+
+			<br><br>
+	</tr>
+
+
+
+</fieldset>
+
+<hr style="height:2px; border-width:0;background-color:blue">
+<h2>RESULTADO CONSULTA:</h2>
+<hr style="width: 800px;">
+<div id="resultado"></div>
+<br><br>
+<hr style="width: 800px;">
+<a href="index.html" title="Regresar la Menu Principal">Regresar Menú Inicial</a>
+</center>
+
+</body>
+
+
+</html>
+
+
+
+
+
+
